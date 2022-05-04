@@ -30,7 +30,7 @@ const atualizaTransacoes = (dados) => conecta(TRANSACOES_URI, {
   body: JSON.stringify(dados),
 });
 
-export default {
+export {
   listaTransacoes,
   buscaSaldo,
   atualizaSaldo,

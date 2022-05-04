@@ -2,7 +2,12 @@ import React, { useEffect, useState } from 'react';
 
 import Conta from './conta/Conta';
 import Transacoes from './transacoes/Transacoes';
-import api from './api';
+import {
+  listaTransacoes,
+  buscaSaldo,
+  atualizaSaldo,
+  atualizaTransacoes
+} from './api';
 
 import './App.css';
 
@@ -19,19 +24,19 @@ function App() {
   const [transacoes, atualizarTransacoes] = useState([]);
 
   async function carregarTransacoes() {
-    const transacoes = await api.listaTransacoes();
+    const transacoes = await listaTransacoes();
     atualizarTransacoes(transacoes);
   }
 
   async function obterSaldo() {
-    atualizarSaldo(await api.buscaSaldo());
+    atualizarSaldo(await buscaSaldo());    
   }
 
   function realizarTransacao(valores) {  
     const novoSaldo = calcularNovoSaldo(valores, saldo);
 
-    api.atualizaSaldo(novoSaldo).catch((error) => console.error(error))
-    api.atualizaTransacoes(valores).catch((error) => console.error(error))
+    atualizaSaldo(novoSaldo).catch((error) => console.error(error))
+    atualizaTransacoes(valores).catch((error) => console.error(error))
     
     atualizarSaldo(novoSaldo);
     atualizarTransacoes([valores]);
