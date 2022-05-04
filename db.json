@@ -11,9 +11,27 @@
     },
     {
       "transacao": "deposito",
-      "valor": "20",
+      "valor": 20,
       "data": "26/09/2020",
       "id": 2
+    },
+    {
+      "transacao": "saque",
+      "valor": 10,
+      "data": "03/05/2022",
+      "id": 3
+    },
+    {
+      "transacao": "saque",
+      "valor": 10,
+      "data": "03/05/2022",
+      "id": 4
+    },
+    {
+      "transacao": "saque",
+      "valor": 10,
+      "data": "03/05/2022",
+      "id": 5
     }
   ]
 }

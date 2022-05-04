@@ -15,7 +15,7 @@ const Transacoes = ({ transacoes }) => {
 Transacoes.defaultProp = {
     transacoes: [{
         tipo: '',
-        valor: '',
+        valor: 0,
         data: '',
     }],
 }
@@ -23,7 +23,7 @@ Transacoes.defaultProp = {
 Transacoes.propTypes = {
     transacoes: PropTypes.arrayOf(PropTypes.shape({
         tipo: PropTypes.string,
-        valor: PropTypes.string,
+        valor: PropTypes.number,
         data: PropTypes.string,
     })),
 }
