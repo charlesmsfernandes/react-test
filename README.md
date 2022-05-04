@@ -44,7 +44,7 @@ npm test
 * Testar uma requisição para um endpoint.
 * Simular uma função e em quais casos de teste isso pode ser útil.
 
-### 5
+### Aula 5
 
 * Entender a pirâmide de testes.
 * Os tipos de teste mais comuns no backend e frontend: unitário, integração e end to end.
